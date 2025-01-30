@@ -1,0 +1,183 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url("https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 120vh;
+    margin: 0;
+}
+
+/* Main Box */
+.main_box {
+    position: relative;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Checkbox Toggle */
+#check {
+    display: none;
+}
+
+#check:checked ~ .overlay {
+    display: block;
+}
+
+/* Sidebar */
+.sidebar_menu {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #e0a6d5;
+    transition: left 0.3s;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+/* Sidebar Content */
+.logo {
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.profile p {
+    color: white;
+    margin-top: 10px;
+}
+
+/* Navigation Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu li i {
+    margin-right: 15px;
+    color: white;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background: #34495e;
+}
+
+/* Social Media Icons */
+.social_media ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.social_media ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social_media ul li a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social_media ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Logout Button */
+.logout {
+    text-align: center;
+    padding: 15px;
+}
+
+.logout button {
+    padding: 8px 20px;
+    background: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout button:hover {
+    background: darkred;
+}
+
+/* Open & Close Buttons */
+.btn_one {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+.btn_one label {
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn_two {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.btn_two label {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
